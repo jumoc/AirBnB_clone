@@ -24,11 +24,11 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
     def do_quit(self, line):
-        'Quit command to exit the program'
+        'Quit command to exit the program\n'
         return True
 
     def do_EOF(self, line):
-        'EOF (CTRL + D) command to exit the program'
+        'EOF (CTRL + D) command to exit the program\n'
         print()
         return True
 
@@ -161,11 +161,9 @@ class HBNBCommand(cmd.Cmd):
 
         """
 
-        """if self.lastcmd:
+        if self.lastcmd:
             self.lastcmd = ""
-            return self.onecmd("\n")"""
-
-        pass
+            return self.onecmd("\n")
 
 # call the cmdloop() on the class HBNB (casted as a
 # instance with "()"), it can also be done as follows
