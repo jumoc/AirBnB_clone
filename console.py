@@ -16,6 +16,10 @@ class HBNBCommand(cmd.Cmd):
         print()
         return True
 
+    def emptyline(self):
+        """new line when not a command """
+        pass
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
