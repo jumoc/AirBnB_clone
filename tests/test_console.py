@@ -10,21 +10,19 @@ from console import HBNBCommand
 class testCommand(unittest.TestCase):
     """Command test"""
 
-    def test_help_quit(self):
+    def test_quit(self):
         """test for quit command"""
-        message = "Quit command to exit the program\n\n"
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("help quit")
+            HBNBCommand().onecmd("quit")
         stdo = f.getvalue()
-        self.assertEqual(message, stdo)
+        self.assertEqual(stdo, "")
 
-    def test_help_EOF(self):
+    def test_EOF(self):
         """test for EOF [CTRL + D] command"""
-        message = "EOF (CTRL + D) command to exit the program\n\n"
         with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("help EOF")
+            HBNBCommand().onecmd("EOF")
         stdo = f.getvalue()
-        self.assertEqual(message, stdo)
+        self.assertEqual(stdo, "\n")
 
 
 if __name__ == "__main__":
