@@ -55,8 +55,8 @@ class HBNBCommand(cmd.Cmd):
             return
 
         instance = HBNBCommand.classes[args[0]]()
+        storage.save()
         print(instance.id)
-        instance.save()
 
     def do_show(self, line):
         args = shlex.split(line)
@@ -102,7 +102,7 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, line):
         args = shlex.split(line)
         instances = []
-        n_dict = storage.all().copy()
+        n_dict = storage.all()
 
         if len(args) > 0 and not args[0] in HBNBCommand.classes.keys():
             print("** class doesn't exist **")
