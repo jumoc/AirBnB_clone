@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module"""
+"""Command interpreter for HBNB project"""
 import cmd
 import shlex
 import models
@@ -13,21 +13,16 @@ from models.place import Place
 
 
 class HBNBCommand(cmd.Cmd):
+    """class that inherits from cmd.Cmd"""
     classes = {
         "BaseModel": BaseModel, "User": User,
         "State": State, "City": City, "Amenity": Amenity,
         "Review": Review, "Place": Place
     }
-    """class that inherits from cmd.Cmd
 
-    .cmdloop()          ---> keeps the cmd opened
-    it requires its positional argument self:
-    Cmd.cmdloop() instead of Cmd.cmdloop()
-
-    """
     intro = 'Welcome to the hbnb shell.   Type help or ? to list commands.\n'
     prompt = '(hbnb) '
-    file = None
+    """file = None"""
     """How to create commands?
     create a method inherited from cmd.Cmd
 
@@ -35,7 +30,7 @@ class HBNBCommand(cmd.Cmd):
 
     """command needs two arguments"""
 
-    def do_quit(self, arg):
+    def do_quit(self, line):
         'Quit command to exit the program\n'
         return True
 
@@ -179,13 +174,11 @@ class HBNBCommand(cmd.Cmd):
 
 # call the cmdloop() on the class HBNB (casted as a
 # instance with "()"), it can also be done as follows
-
 # HBNB_app = HBNBCommand()
 # HBNB_app.cmdloop()
-
 # in case you need the instance HBNB_app later in your programm
-
 # magic method
+# .cmdloop() ---> keeps the cmd opened
 
 
 if __name__ == '__main__':
