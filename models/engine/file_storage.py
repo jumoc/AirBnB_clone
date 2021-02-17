@@ -37,6 +37,7 @@ class FileStorage():
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
             f.write(json.dumps(new_dict))
 
+
     def reload(self):
         """Reloads the file and loads it to __objects"""
         try:

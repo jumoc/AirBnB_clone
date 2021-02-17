@@ -68,7 +68,7 @@ class HBNBCommand(cmd.Cmd):
 
         instance = HBNBCommand.classes[args[0]]()
         print(instance.id)
-        instance.save()
+        models.storage.save()
 
     def do_show(self, line):
         """Show an instance of a class given an id
