@@ -166,6 +166,14 @@ class HBNBCommand(cmd.Cmd):
             return self.onecmd('\n')"""
         pass
 
+    def postcmd(self, stop: bool, line: str) -> bool:
+        return super().postcmd(stop, line)
+
+    def precmd(self):
+        if self.lastcmd:
+            self.lastcmd = ""
+            return self.onecmd('\n')
+
     def postloop(self):
         """postloop docstring"""
         print()
