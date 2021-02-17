@@ -15,14 +15,7 @@ class testCommand(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("quit")
         stdo = f.getvalue()
-        self.assertEqual(stdo, "")
-
-    def test_EOF(self):
-        """test for EOF [CTRL + D] command"""
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("EOF")
-        stdo = f.getvalue()
-        self.assertEqual(stdo, "\n")
+        self.assertEqual(stdo, True)
 
 
 if __name__ == "__main__":
