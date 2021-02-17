@@ -18,14 +18,16 @@ class FileStorage():
         FileStorage.__objects[n_obj] = obj
 
     def save(self):
+        """ send object to JSON """
+
         new_dict = {}
         for element in FileStorage.__objects:
             obj = FileStorage.__objects[element]
             obj_dict = obj.to_dict()
             new_dict[element] = obj_dict
-
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
             f.write(json.dumps(new_dict))
+
 
     def reload(self):
         try:
