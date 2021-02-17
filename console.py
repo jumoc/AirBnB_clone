@@ -161,9 +161,11 @@ class HBNBCommand(cmd.Cmd):
 
         """
 
-        if self.lastcmd:
+        """if self.lastcmd:
             self.lastcmd = ""
-            return self.onecmd("\n")
+            return self.onecmd("\n")"""
+
+        pass
 
 # call the cmdloop() on the class HBNB (casted as a
 # instance with "()"), it can also be done as follows
