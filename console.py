@@ -21,7 +21,7 @@ class HBNBCommand(cmd.Cmd):
     }
 
     intro = 'Welcome to the hbnb shell.   Type help or ? to list commands.\n'
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def do_quit(self, line):
         'Quit command to exit the program\n'
@@ -163,8 +163,12 @@ class HBNBCommand(cmd.Cmd):
 
         """if self.lastcmd:
             self.lastcmd = ""
-            return self.onecmd()"""
+            return self.onecmd('\n')"""
         pass
+
+    def postloop(self):
+        """postloop docstring"""
+        print()
 
 # call the cmdloop() on the class HBNB (casted as a
 # instance with "()"), it can also be done as follows
