@@ -159,6 +159,24 @@ class HBNBCommand(cmd.Cmd):
                 instance.__dict__[args[2]] = args[3]
                 instance.save()
 
+    def emptyline(self):
+        """Called when an empty line is entered in response to the prompt.
+
+        If this method is not overridden, it repeats the last nonempty
+        command entered, it would return the following:
+
+        >   return self.onecmd(self.lastcmd)
+
+        Further solution:
+
+        >   pass
+
+        """
+
+        if self.lastcmd:
+            self.lastcmd = ""
+            return self.onecmd("\n")
+
 # call the cmdloop() on the class HBNB (casted as a
 # instance with "()"), it can also be done as follows
 
@@ -168,6 +186,7 @@ class HBNBCommand(cmd.Cmd):
 # in case you need the instance HBNB_app later in your programm
 
 # magic method
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
