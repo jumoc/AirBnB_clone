@@ -22,13 +22,6 @@ class HBNBCommand(cmd.Cmd):
 
     intro = 'Welcome to the hbnb shell.   Type help or ? to list commands.\n'
     prompt = '(hbnb) '
-    """file = None"""
-    """How to create commands?
-    create a method inherited from cmd.Cmd
-
-    """
-
-    """command needs two arguments"""
 
     def do_quit(self, line):
         'Quit command to exit the program\n'
