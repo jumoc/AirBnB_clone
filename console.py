@@ -168,6 +168,12 @@ class HBNBCommand(cmd.Cmd):
                 print(self.get_instances(args[0]))
             if args[1] == "count()":
                 print(len(self.get_instances(args[0])))
+            new_list = args[1].split("\"")
+            if len(new_list) == 3:
+                names = [args[0], new_list[1]]
+                instance = self.search_instance(names)
+                print(instance) if instance\
+                    else print("** no instance found **")
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
