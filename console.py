@@ -147,6 +147,26 @@ class HBNBCommand(cmd.Cmd):
                 instance.__dict__[args[2]] = args[3]
                 instance.save()
 
+    def get_instances(self, name):
+        n_dict = models.storage.all()
+        instances = []
 
+        for key, value in n_dict.items():
+            instance = None
+            if name is None:
+                instance = value
+            elif name == value.to_dict()["__class__"]:
+                instance = value
+            if instance is not None:
+                instances.append(instance.__str__())
+        return instances
+
+    def default(self, line):
+        args = line.split(".")
+        if len(args) == 2:
+            if args[1] == "all()":
+                print(self.get_instances(args[0]))
+            if args[1] == "count()":
+                print(len(self.get_instances(args[0])))
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
