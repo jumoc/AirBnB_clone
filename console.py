@@ -162,6 +162,7 @@ class HBNBCommand(cmd.Cmd):
         return instances
 
     def default(self, line):
+        n_dict = models.storage.all()
         args = line.split(".")
         if len(args) == 2:
             if args[1] == "all()":
@@ -172,8 +173,19 @@ class HBNBCommand(cmd.Cmd):
             if len(new_list) == 3:
                 names = [args[0], new_list[1]]
                 instance = self.search_instance(names)
-                print(instance) if instance\
-                    else print("** no instance found **")
+                if new_list[0] == "show(":
+                    print(instance) if instance\
+                        else print("** no instance found **")
+                elif new_list[0] == "destroy(":
+                    if instance:
+                        key = f"{args[0]}.{new_list[1]}"
+                        try:
+                            n_dict.pop(key)
+                            models.storage.save()
+                        except:
+                            pass
+
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
