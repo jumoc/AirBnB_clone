@@ -176,14 +176,6 @@ class HBNBCommand(cmd.Cmd):
                 if new_list[0] == "show(":
                     print(instance) if instance\
                         else print("** no instance found **")
-                elif new_list[0] == "destroy(":
-                    if instance:
-                        key = f"{args[0]}.{new_list[1]}"
-                        try:
-                            n_dict.pop(key)
-                            models.storage.save()
-                        except:
-                            pass
 
 
 
