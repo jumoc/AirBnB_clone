@@ -22,17 +22,19 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
     def do_quit(self, arg):
-        'Quit command to exit the program\n'
+        "Quit command to exit the program\n"
         return True
 
     def do_EOF(self, line):
-        'EOF (CTRL + D) command to exit the program\n'
+        "EOF (CTRL + D) command to exit the program\n"
         print()
         return True
 
     def emptyline(self):
         """new line when not a command """
-        pass
+        if self.lastcmd:
+            self.lastcmd = ""
+            return self.onecmd('\n')
 
     def search_instance(self, args):
         """Searches for an instance given a list of arguments"""
