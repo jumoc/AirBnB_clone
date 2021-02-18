@@ -17,6 +17,24 @@ class testCommand(unittest.TestCase):
         stdo = f.getvalue()
         self.assertEqual(stdo, "")
 
+    def test_EOF(self):
+        """test for EOF (CTRL + D) command"""
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("EOF")
+        stdo = f.getvalue()
+        self.assertEqual(stdo, "\n")
+
+    # help tests
+
+    def test_help_help(self):
+        """test for help quit command"""
+        message = "List available commands with \"help\" " \
+            "or detailed help with \"help cmd\".\n"
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("help help")
+        stdo = f.getvalue()
+        self.assertEqual(stdo, message)
+
     def test_help_quit(self):
         """test for help quit command"""
         message = "Quit command to exit the program\n\n"
@@ -24,13 +42,6 @@ class testCommand(unittest.TestCase):
             HBNBCommand().onecmd("help quit")
         stdo = f.getvalue()
         self.assertEqual(stdo, message)
-
-    def test_EOF(self):
-        """test for EOF (CTRL + D) command"""
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("EOF")
-        stdo = f.getvalue()
-        self.assertEqual(stdo, "\n")
 
     def test_help_EOF(self):
         """test for help quit command"""
