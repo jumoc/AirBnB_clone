@@ -37,7 +37,6 @@ class FileStorage():
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
             f.write(json.dumps(new_dict))
 
-
     def reload(self):
         """Reloads the file and loads it to __objects"""
         try:
@@ -45,5 +44,5 @@ class FileStorage():
                 for key, value in json.loads(f.read()).items():
                     instance = eval(value["__class__"])(**value)
                     FileStorage.__objects[key] = instance
-        except:
+        except BaseException:
             return
