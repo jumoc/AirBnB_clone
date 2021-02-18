@@ -169,5 +169,6 @@ class HBNBCommand(cmd.Cmd):
             if args[1] == "count()":
                 print(len(self.get_instances(args[0])))
 
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
