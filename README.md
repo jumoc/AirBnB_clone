@@ -62,8 +62,7 @@ $
 ```
 # Project overview
 
-<a href="![hbnb](https://user-images.githubusercontent.com/69823997/108603381-98642580-7375-11eb-9dba-f52d0f3f3074.png)
-" alt="CACA" border="0"></a>
+![hbnb](https://user-images.githubusercontent.com/69823997/108603381-98642580-7375-11eb-9dba-f52d0f3f3074.png)
 
 # Test
 
