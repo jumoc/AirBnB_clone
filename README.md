@@ -1,3 +1,5 @@
+![HBNB](https://user-images.githubusercontent.com/69823997/108614204-c887e480-73c6-11eb-9d40-c6f38627d8f7.png)
+
 <h1 align="center"> HBNB - The Console </h1>
 
 # About
@@ -71,7 +73,15 @@ $ python3 -m unittest discover tests
 ```
 
 # Authors
- 	* **Juan Pablo Montoya**
-	 	* <a href="https://twitter.com/Jumo0"> Twitter </a> & <a href="https://www.linkedin.com/in/jumoc/"> LinkedIn </a> & <a href="https://github.com/Jumoc"> GitHub </a>
-	* **Alejandro Franco Cedeño**
-		* <a href="https://twitter.com/afrancocedeno"> Twitter </a> & <a href="https://www.linkedin.com/in/afrancocedeno/"> LinkedIn </a> & <a href="https://github.com/afrancocedeno"> GitHub </a>
+
+ 	* Juan Pablo Montoya
+
+		[Twitter:](https://twitter.com/Jumo0)
+		[LinkedIn](https://www.linkedin.com/in/jumoc/)
+		[Github](https://github.com/Jumoc)
+
+	* Alejandro Franco Cedeño
+
+		[Twitter](https://twitter.com/afrancocedeno
+		[LinkedIn](https://www.linkedin.com/in/afrancocedeno/
+		[GitHub](https://github.com/afrancocedeno
