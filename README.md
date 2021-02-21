@@ -74,14 +74,6 @@ $ python3 -m unittest discover tests
 
 # Authors
 
- 	* Juan Pablo Montoya
+Juan Pablo Montoya ([Twitter:](https://twitter.com/Jumo0), [LinkedIn](https://www.linkedin.com/in/jumoc/), [Github](https://github.com/Jumoc))
 
-		[Twitter:](https://twitter.com/Jumo0)
-		[LinkedIn](https://www.linkedin.com/in/jumoc/)
-		[Github](https://github.com/Jumoc)
-
-	* Alejandro Franco Cedeño
-
-		[Twitter](https://twitter.com/afrancocedeno
-		[LinkedIn](https://www.linkedin.com/in/afrancocedeno/
-		[GitHub](https://github.com/afrancocedeno
+Alejandro Franco Cedeño ([Twitter](https://twitter.com/afrancocedeno), [LinkedIn](https://www.linkedin.com/in/afrancocedeno/), [GitHub](https://github.com/afrancocedeno))
