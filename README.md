@@ -6,7 +6,12 @@
 
 The AirBnB console is a CLI that allows you to manipulate (create, update, delete and store) elements through JSON. By doing this we're creating an interface to communicate to the DataBase (Which is a file that gets manipulated).
 
-# list of elements available
+#list of files
+
+Basemodel.py -> default template for class elements creation
+filestorage.py -> Responsible to ocmmunicate json with new classes or modified ones
+
+# List of elements available
 
 	* Amenity
 	* City
@@ -62,6 +67,18 @@ EOF  help  quit
 (hbnb)
 $
 ```
+
+# List of commands
+
+help
+quit
+EOF
+create
+show
+destroy
+all
+update
+
 # Project overview
 
 ![hbnb](https://user-images.githubusercontent.com/69823997/108603381-98642580-7375-11eb-9dba-f52d0f3f3074.png)
@@ -74,6 +91,6 @@ $ python3 -m unittest discover tests
 
 # Authors
 
-Juan Pablo Montoya ([Twitter:](https://twitter.com/Jumo0), [LinkedIn](https://www.linkedin.com/in/jumoc/), [Github](https://github.com/Jumoc))
+Juan Pablo Montoya ([Twitter](https://twitter.com/Jumo0), [LinkedIn](https://www.linkedin.com/in/jumoc/), [Github](https://github.com/Jumoc))
 
 Alejandro Franco Cedeño ([Twitter](https://twitter.com/afrancocedeno), [LinkedIn](https://www.linkedin.com/in/afrancocedeno/), [GitHub](https://github.com/afrancocedeno))
