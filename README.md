@@ -6,19 +6,14 @@
 
 The AirBnB console is a CLI that allows you to manipulate (create, update, delete and store) elements through JSON. By doing this we're creating an interface to communicate to the DataBase (Which is a file that gets manipulated).
 
-#list of files
-
-Basemodel.py -> default template for class elements creation
-filestorage.py -> Responsible to ocmmunicate json with new classes or modified ones
-
 # List of elements available
 
-	* Amenity
-	* City
-	* Place
-	* Review
-	* State
-	* User
+* Amenity
+* City
+* Place
+* Review
+* State
+* User
 
 # How to
 ------------
@@ -70,14 +65,14 @@ $
 
 # List of commands
 
-help
-quit
-EOF
-create
-show
-destroy
-all
-update
+* help: List available commands with "help" or detailed help with "help cmd"
+* quit: Quit command to exit the program.
+* EOF: (CTRL + D) command to exit the program.
+* create: Creates an instance of a class.
+* show: Show an instance of a class given an id.
+* destroy: Destroy an instance of a class given an id.
+* all: Print all instances depending on the argument given.
+* update: Updates or creates a value of a given instance.
 
 # Project overview
 
@@ -91,6 +86,6 @@ $ python3 -m unittest discover tests
 
 # Authors
 
-Juan Pablo Montoya ([Twitter](https://twitter.com/Jumo0), [LinkedIn](https://www.linkedin.com/in/jumoc/), [Github](https://github.com/Jumoc))
+* Juan Pablo Montoya ([Twitter](https://twitter.com/Jumo0), [LinkedIn](https://www.linkedin.com/in/jumoc/), [Github](https://github.com/Jumoc))
 
-Alejandro Franco Cedeño ([Twitter](https://twitter.com/afrancocedeno), [LinkedIn](https://www.linkedin.com/in/afrancocedeno/), [GitHub](https://github.com/afrancocedeno))
+* Alejandro Franco Cedeño ([Twitter](https://twitter.com/afrancocedeno), [LinkedIn](https://www.linkedin.com/in/afrancocedeno/), [GitHub](https://github.com/afrancocedeno))
